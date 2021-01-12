@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router';
 import './App.css';
 import Header from './components/Header/Header';
-import Home from './pages/Home/Home';
-import Jokes from './pages/Jokes/Jokes';
+import Home from './pages/HomePage/HomePage';
+import Jokes from './pages/JokesPage/JokesPage';
 
 function App() {
   return (
