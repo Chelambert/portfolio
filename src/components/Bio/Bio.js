@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import Projects from './components/Projects/Projects';
-// import Socials from './components/Socials/Socials';
-// import Title from './components/Title/Title';
 import profile from '../../assets/profile_cropped.jpg';
 import Title from '../Title/Title';
 
