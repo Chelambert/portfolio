@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import './JokeRandom.css';
 import Joke from '../Joke/Joke';
+import { iJoke } from '../../utils/interfaces';
 
-const JokeRandom = () => {
-    const [joke, setJoke] = useState({});
+const JokeRandom: React.FC = () => {
+    const [joke, setJoke] = useState({} as iJoke);
 
     useEffect(() => {
         getRandomJoke();
@@ -13,7 +13,7 @@ const JokeRandom = () => {
     const getRandomJoke = async () => {
         try {
             const resp = await fetch('https://official-joke-api.appspot.com/random_joke');
-            const jokeObj = await resp.json();
+            const jokeObj: iJoke = await resp.json();
             setJoke(jokeObj);
         } catch (err) {
             console.log(err);
@@ -27,9 +27,5 @@ const JokeRandom = () => {
         </div>
     )
 };
-
-JokeRandom.propTypes = {};
-
-JokeRandom.defaultProps = {};
 
 export default JokeRandom;

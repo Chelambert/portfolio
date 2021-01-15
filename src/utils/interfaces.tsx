@@ -11,3 +11,10 @@ export interface iSocial {
     link: string;
     image: string;
 }
+
+export interface iJoke {
+    id: number;
+    type: string;
+    setup: string;
+    punchline: string;
+}

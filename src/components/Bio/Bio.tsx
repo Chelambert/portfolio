@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import profile from '../../assets/profile_cropped.jpg';
 import Title from '../Title/Title';
 
 const Bio: React.FC = () => {
     const [displayBio, setDisplayBio] = useState(false);
 
-    const toggleDisplayBio = () => {
+    const toggleDisplayBio = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         setDisplayBio(!displayBio);
     }
 

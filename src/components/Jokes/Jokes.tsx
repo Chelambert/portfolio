@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Joke from '../Joke/Joke';
+import { iJoke } from '../../utils/interfaces';
 
-const Jokes = () => {
-    const [jokes, setJokes] = useState([]);
+const Jokes: React.FC = () => {
+    const [jokes, setJokes] = useState([] as iJoke[]);
 
     const getRandomTenJokes = async () => {
         try {
             const resp = await fetch('https://official-joke-api.appspot.com/random_ten');
-            const jokesArr = await resp.json();
+            const jokesArr: iJoke[] = await resp.json();
             setJokes(jokesArr);
         } catch (err) {
             console.log(err);

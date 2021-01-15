@@ -1,6 +1,11 @@
 import React from 'react';
+import { iJoke } from '../../utils/interfaces';
 
-const Joke = ({ joke }) => {
+interface Props {
+    joke: iJoke;
+}
+
+const Joke: React.FC<Props> = ({ joke }) => {
     const { setup, punchline } = joke;
 
     return (

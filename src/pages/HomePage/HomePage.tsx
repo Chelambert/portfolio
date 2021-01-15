@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './HomePage.css';
 import Bio from '../../components/Bio/Bio';
 import Projects from '../../components/Projects/Projects';
 import Socials from '../../components/Socials/Socials';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
 
     return (
         <div className="HomePage">
@@ -17,9 +16,5 @@ const HomePage = () => {
         </div>
     )
 };
-
-HomePage.propTypes = {};
-
-HomePage.defaultProps = {};
 
 export default HomePage;
