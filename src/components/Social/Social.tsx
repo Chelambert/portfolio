@@ -1,7 +1,12 @@
 import React from 'react';
+import { iSocial } from '../../utils/interfaces'
 
-const Social = props => {
-    const { image, link } = props.social;
+interface Props {
+    social: iSocial;
+}
+
+const Social: React.FC<Props> = ({ social }) => {
+    const { image, link } = social;
 
     return (
         <span>

@@ -2,7 +2,7 @@ import React from 'react';
 import SOCIALS from '../../test-data/socials-data';
 import Social from '../Social/Social';
 
-const Socials = () => (
+const Socials: React.FC = () => (
     <div>
         <h2>Connect with me!</h2>
         <div>

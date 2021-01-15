@@ -1,7 +1,12 @@
 import React from 'react';
+import { iProject } from '../../utils/interfaces'
 
-const Project = props => {
-    const { title, image, description, link } = props.project;
+interface Props {
+    project: iProject;
+}
+
+const Project: React.FC<Props> = ({ project }) => {
+    const { title, image, description, link } = project;
 
     return (
         <div style={{ display: 'inline-block', width: 300, margin: 10 }}>
